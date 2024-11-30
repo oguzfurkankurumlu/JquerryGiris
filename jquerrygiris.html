@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: deeppink;
+        }
+    </style>
+
+    <script>
+
+        //Jquerry de jquerrylerın html elementlerını yuklemesını beklemek ıcın document.ready() kullanıyoruz.
+        
+        $(document).ready(function () {
+            $(".show").click(function () {
+                //class ı show olan input butona basıldıgında
+                //divi gösterelim
+                $(".container").fadeIn("slow");
+
+
+            });
+
+            $(".hide").click(function () {
+                //classı hide olan input butona basıldıgında
+                //div'i gizleyelim
+
+                $(".container").fadeOut("slow");
+
+
+            });
+
+        });
+
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <div class="container"></div>
+    <input class="show" type="button" value="Göster">
+    <input class="hide" type="button" value="Gizle">
+
+
+</body>
+
+</html>
