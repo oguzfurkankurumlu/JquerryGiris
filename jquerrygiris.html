@@ -18,14 +18,21 @@
     <script>
 
         //Jquerry de jquerrylerın html elementlerını yuklemesını beklemek ıcın document.ready() kullanıyoruz.
-        
+
         $(document).ready(function () {
             $(".show").click(function () {
                 //class ı show olan input butona basıldıgında
                 //divi gösterelim
                 $(".container").fadeIn("slow");
 
+                //YENI BIR CONTAINER ACSIN ICERIDE
+                var newDiv = $('<div>', {
+                    id: '4',
+                    class: "container"
+                });
 
+                //OLUSTURULAN YENİ DİVİ DOMA EKLEYELIM
+                $("body").append(newDiv);
             });
 
             $(".hide").click(function () {
